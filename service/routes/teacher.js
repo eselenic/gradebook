@@ -21,7 +21,7 @@ teacherRoutes.route('/:id').get(function(req, res) {
 
 teacherRoutes.route('/add').post(function(req, res) {
     let teacher = new Teacher(req.body);
-    grade.save()
+    teacher.save()
         .then(teacher => {
             res.status(200).json({'teacher': 'teacher added successfully'});
         })

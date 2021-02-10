@@ -21,7 +21,7 @@ studentRoutes.route('/:id').get(function(req, res) {
 
 studentRoutes.route('/add').post(function(req, res) {
     let student = new Student(req.body);
-    grade.save()
+    student.save()
         .then(student => {
             res.status(200).json({'student': 'student added successfully'});
         })
