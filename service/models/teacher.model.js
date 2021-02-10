@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 let Teacher = new Schema({
     teacher_id: {
-        type: ObjectId
+        type: Schema.Types.ObjectId
     },
     classes: {
-        type: [ObjectId]
+        type: [Schema.Types.ObjectId]
     }
 });
 

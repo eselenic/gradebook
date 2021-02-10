@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let Class = new Schema({
     class_id: {
-        type: ObjectId
+        type: Schema.Types.ObjectId
     },
     classname: {
         type: String
@@ -12,7 +12,7 @@ let Class = new Schema({
         type: String
     },
     students: {
-        type: [ObjectId]
+        type: [Schema.Types.ObjectId]
     }
 });
 
