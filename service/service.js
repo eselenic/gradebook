@@ -6,7 +6,10 @@ const mongoose = require('mongoose');
 const gradebookRoutes = express.Router();
 const PORT = 4000;
 
-let Gradebook = require('./gb.model');
+let Gradebook = require('./models/gb.model');
+let Classes = require('./models/class.model');
+let Teachers = require('./models/teacher.model');
+let Students = require('./models/student.model');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -18,6 +21,7 @@ connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
 
+/* TODO: Update gradebookRoutes after TODO from gb.model.js is completed*/
 gradebookRoutes.route('/').get(function(req, res) {
     Gradebook.find(function(err, gradebook) {
         if (err) {
