@@ -35,12 +35,11 @@ classesRoutes.route('/update/:id').post(function(req, res) {
         if (!classes)
             res.status(404).send("data is not found");
         else
-        classes.classes_id = req.body.class_id;
-        classes.classname = req.body.classname;
-        classes.teachers = req.body.teachers;
-        classes.students = req.body.students;
+            classes.classname = req.body.classname;
+            classes.teachers = req.body.teachers;
+            classes.students = req.body.students;
 
-        classes.save().then(classes => {
+            classes.save().then(classes => {
                 res.json('Classes updated!');
             })
             .catch(err => {
