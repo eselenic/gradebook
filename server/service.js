@@ -12,6 +12,8 @@ app.use('/gradebook', require('./routes/gradebook'));
 app.use('/class', require('./routes/class'));
 app.use('/teacher', require('./routes/teacher'));
 app.use('/student', require('./routes/student'));
+app.use('/grade', require('./routes/grade'));
+app.use('/assignment', require('./routes/assignment'));
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
