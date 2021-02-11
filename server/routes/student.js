@@ -35,7 +35,13 @@ studentRoutes.route('/update/:id').post(function(req, res) {
         if (!student)
             res.status(404).send("data is not found");
         else
-            student.student_name = req.body.student_id;
+            student.school_id = req.body.school_id;
+            student.student_name = req.body.student_name;
+            student.username = req.body.username;
+            student.password = req.body.password;
+            student.activities = req.body.activities;
+            student.disciplines = req.body.disciplines;
+            student.gradebook = req.body.gradebook;
 
             student.save().then(student => {
                 res.json('Student updated!');
