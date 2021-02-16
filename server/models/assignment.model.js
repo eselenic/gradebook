@@ -10,9 +10,6 @@ let Assignment = new Schema({
     },
     description: {
         type: String
-    },
-    grade: {
-        type: Number
     }
 });
 

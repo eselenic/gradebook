@@ -14,7 +14,7 @@ gradeRoutes.route('/').get(function(req, res) {
 
 gradeRoutes.route('/:id').get(function(req, res) {
     let id = req.params.id;
-    Grade.findById(id, function(err, todo) {
+    ClassGrade.findById(id, function(err, todo) {
         res.json(todo);
     });
 });
@@ -35,9 +35,7 @@ gradeRoutes.route('/update/:id').post(function(req, res) {
         if (!grade)
             res.status(404).send("data is not found");
         else
-            grade.school_id = req.body.school_id;
-            grade.class_id = req.body.class_id;
-            grade.assignments = req.body.assignments;
+            grade.assignment = req.body.assignment;
             grade.overall_grade = req.body.overall_grade;
 
             grade.save().then(grade => {
@@ -49,4 +47,4 @@ gradeRoutes.route('/update/:id').post(function(req, res) {
     });
 });
 
-module.exports = gradeRoutes;
+module.exports = classGradeRoutes;
