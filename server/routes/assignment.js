@@ -1,6 +1,6 @@
 const assignmentRoutes = require('express').Router();
 
-let Assignment = require('../models/class.model');
+let Assignment = require('../models/assignment.model');
 
 assignmentRoutes.route('/').get(function(req, res) {
     Assignment.find(function(err, assignment) {

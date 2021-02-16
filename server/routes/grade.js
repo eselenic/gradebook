@@ -1,6 +1,6 @@
 const gradeRoutes = require('express').Router();
 
-let Grade = require('../models/class.model');
+let Grade = require('../models/grade.model');
 
 gradeRoutes.route('/').get(function(req, res) {
     Grade.find(function(err, grade) {
