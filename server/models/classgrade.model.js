@@ -5,6 +5,9 @@ let ClassGrade = new Schema({
     school_id: {
         type: Number
     },
+    student_id:{
+        type: Schema.Types.ObjectId
+    },
     class_id: {
         type: Schema.Types.ObjectId
     },

@@ -37,6 +37,7 @@ classGradeRoutes.route('/update/:id').post(function(req, res) {
         else
             classGrade.school_id = req.body.school_id;
             classGrade.class_id = req.body.class_id;
+            classGrade.student_id = req.body.student_id;
             classGrade.assignments = req.body.assignments;
             classGrade.overall_classGrade = req.body.overall_classGrade;
 
