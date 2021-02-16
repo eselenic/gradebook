@@ -12,7 +12,7 @@ app.use('/gradebook', require('./routes/gradebook'));
 app.use('/class', require('./routes/class'));
 app.use('/teacher', require('./routes/teacher'));
 app.use('/student', require('./routes/student'));
-app.use('/grade', require('./routes/grade'));
+app.use('/classgrade', require('./routes/classgrade'));
 app.use('/assignment', require('./routes/assignment'));
 
 app.listen(PORT, function() {
