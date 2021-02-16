@@ -47,4 +47,4 @@ gradeRoutes.route('/update/:id').post(function(req, res) {
     });
 });
 
-module.exports = classGradeRoutes;
+module.exports = gradeRoutes;
