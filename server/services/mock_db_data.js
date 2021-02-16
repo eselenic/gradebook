@@ -4,16 +4,16 @@ let Teacher = require('../models/teacher.model');
 let Student = require('../models/student.model');
 let Classes = require('../models/class.model');
 
-var students = [{ student_name: 'Medusa'},
-{ student_name: 'Vetsa'},
-{ student_name: 'Jupiter'},
-{ student_name: 'Minerva'}
+var students = [{ school_id: 1, student_name: 'Medusa', username: 'medusa', password: '1234', activities: [], disciplines: [], gradebook: []},
+{ school_id: 1, student_name: 'Vesta', username: 'vesta', password: 'abcd', activities: [], disciplines: [], gradebook: []},
+{ school_id: 1, student_name: 'Jupiter', username: 'jupiter', password: '0000', activities: [], disciplines: [], gradebook: []},
+{ school_id: 1, student_name: 'Minerva', username: 'minerva', password: '9090', activities: [], disciplines: [], gradebook: []}
 ];
 
-var teachers = [{ teacher_name: 'Zeus', classes: []},
-{ teacher_name: 'Hera', classes: []},
-{ teacher_name: 'Athena', classes: []},
-{ teacher_name: 'Aphrodite', classes: []}
+var teachers = [{ school_id: 1, teacher_name: 'Zeus', username: 'zeus', password: 'num1', activities: [], disciplines: [], current_classes: []},
+{ school_id: 1, teacher_name: 'Hera', username: 'hera', password: 'num2', activities: [], disciplines: [], current_classes: []},
+{ school_id: 1, teacher_name: 'Athena', username: 'athena', password: 'num3', activities: [], disciplines: [], current_classes: []},
+{ school_id: 1, teacher_name: 'Aphrodite', username: 'love', password: 'love', activities: [], disciplines: [], current_classes: []}
 ];
 var studentIds = [];
 var teacherIds = [];
@@ -47,16 +47,16 @@ function populateTeachers(){
 
 function populateClasses(){
   return new Promise(function(resolve, reject) {
-    var classes = [{ classname: 'P.E',
+    var classes = [{ school_id: 1, classname: 'P.E',
     teachers: [teacherIds[0]],
     students: [studentIds[0], studentIds[1]] },
-      { classname: 'Chemistry',
+      { school_id: 1, classname: 'Chemistry',
       teachers: [teacherIds[1]],
       students: [studentIds[0], studentIds[2]] },
-      { classname: 'Calculus',
+      { school_id: 1, classname: 'Calculus',
       teachers: [teacherIds[2]],
       students: [studentIds[3], studentIds[1]] },
-        { classname: 'English',
+        { school_id: 1, classname: 'English',
         teachers: [teacherIds[3]],
         students:  [studentIds[3], studentIds[2]] }
     ];

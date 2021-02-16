@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let Class = new Schema({
     school_id: {
-        type: int
+        type: Number
     },
     classname: {
         type: String

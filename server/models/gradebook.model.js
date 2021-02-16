@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let Gradebook = new Schema({
     year: {
-        type: int
+        type: Number
     },
     grades: {
         type: [Schema.Types.ObjectId]

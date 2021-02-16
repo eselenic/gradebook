@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let Grade = new Schema({
     school_id: {
-        type: int
+        type: Number
     },
     class_id: {
         type: Schema.Types.ObjectId
@@ -12,7 +12,7 @@ let Grade = new Schema({
         type: [Schema.Types.ObjectId]
     },
     overall_grade: {
-        type: double
+        type: Number
     }
 });
 

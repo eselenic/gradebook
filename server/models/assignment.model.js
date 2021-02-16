@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let Assignment = new Schema({
     semester: {
-        type: int
+        type: Number
     },
     type: {
         type: String
@@ -12,7 +12,7 @@ let Assignment = new Schema({
         type: String
     },
     grade: {
-        type: double
+        type: Number
     }
 });
 
